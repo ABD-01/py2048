@@ -6,21 +6,21 @@ import argparse
 # My own defined module consisting of functions such as transpose,inverse, print,etc
 from essentials import *
 
+system('clear')
 
 # Checking for command line arguments with default board dimension 5x5 and default win criteria 2048
 parser = argparse.ArgumentParser(description='Enter Board_Size and Win_criteria')
 parser.add_argument('-n', '--size', type=int, default=5, help='Size of Board')
 parser.add_argument('-w', '--win', type=int, default=2048, help='Win Criteria')
 args = parser.parse_args()
-board_size = args.size
+board_size = int(args.size)
 win_cond = Powerof2(args.win)
-##print("Win criteria is",win_cond)
+print("Win criteria is",win_cond)
 
 # Initializing the board with all zeros and one 2 at random position
 game_board = [[0]*board_size for _ in range(board_size)]
 game_board = insert_two(game_board)
 game_board = insert_two(game_board)
-system('clear')
 printboard(game_board)
 
 
@@ -41,10 +41,11 @@ def getKey():
 
         # If user wants to quit b/w gthe game
         elif ch == 'q':
-            print("Do you want to Exit the game ?(y/n)")
+            print("Do you want to Exit the game ?")
             if input() in ['y', 'yes']:
                 exit(1)
             else:
+                system('clear')
                 printboard(game_board)
                 ch = getch().lower()
 
@@ -110,7 +111,7 @@ while True:
 
     # Checking the game progress
     if didLose(game_board) == True:
-        print('Game Over')
+        print('Game Over, You Lose')
         exit(0)
 
     # checking for winning Criteria
