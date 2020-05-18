@@ -21,6 +21,8 @@ def Powerof2(n):
         if not i&(i-1):
             power = i
             break
+    if power == n:
+        return power
     return power*2
 
 
