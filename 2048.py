@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description='Enter Board_Size and Win_criteria'
 parser.add_argument('-n', '--size', type=int, default=5, help='Size of Board')
 parser.add_argument('-w', '--win', type=int, default=2048, help='Win Criteria')
 args = parser.parse_args()
-board_size = int(args.size)
+board_size = args.size
 win_cond = Powerof2(args.win)
 ##print("Win criteria is",win_cond)
 
