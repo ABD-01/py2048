@@ -21,7 +21,7 @@ or
 
 If no arguments are passed `python 2048.py` then the board dimension are set to 5 x 5 and the winning criteria is set to no. 2048
 
-If the entered value for win is not a power of 2 then it will rounded to greatest power of 2 smaller than or equal to win.  Eg: `python 2048.py -w 476` then `Win criteria is 256`
+If the entered value for win is not a power of 2 then it will rounded to lowest power of 2 greater than or equal to win.  Eg: `python 2048.py -w 476` then `Win criteria is 512`
 
 The Game starts with two 2's at random position.
 
