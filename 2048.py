@@ -14,6 +14,10 @@ parser.add_argument('-n', '--size', type=int, default=5, help='Size of Board')
 parser.add_argument('-w', '--win', type=int, default=2048, help='Win Criteria')
 args = parser.parse_args()
 board_size = int(args.size)
+if board_size == 1:
+    print(2)
+    print('Game Over')
+    exit(1)
 win_cond = Powerof2(args.win)
 print("Win criteria is",win_cond)
 
