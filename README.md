@@ -8,7 +8,7 @@ Here is a Python version of the game.
 
 ***Note : My program is made to work in Ubuntu based environments. Avoid using it on Wndows***
 
-There are two files `2048.py` which is like the main program and `essentials.py` which contains user defined functions used for implementation of the program.
+There are two files `2048.py` which is like the main program and `essentials.py` which contains my own user defined functions used for implementation of the program.
 
 ### Beginnig the Game
 The program reads command line arguments as input
