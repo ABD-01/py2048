@@ -14,14 +14,14 @@ def getch():
 '''DISCLAIMER: THE ABOVE CODE FOR getch() IS TAKEN FROM INTERNET'''
 
 
-# Highest power of two less than or equal to a numebr
+# Lowest power of two greater than or equal to a number
 def Powerof2(n):
     power = 1
     for i in range(n,0,-1):
         if not i&(i-1):
             power = i
             break
-    return power
+    return power*2
 
 
 # Inserting 2 in random in board
