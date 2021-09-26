@@ -56,6 +56,4 @@ The Game starts with two 2's at random position.
    Type `y` or `yes` and hit `ENTER` to quit. 
    
    If you don't want to quit just hit `ENTER` and the game will continue.
-   
-### THANK YOU
-
+  
